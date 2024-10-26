@@ -1,0 +1,27 @@
+% example taken from : https://edrub.in/ARE212/latexKnitr.html#fnref5
+
+\documentclass[english, 11pt]{article}
+\usepackage[utf8]{inputenc}
+
+\title{\LaTeX{} Report Using Knitr}
+\author{R Conference 2024 @ USM}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Example of plotting and Knitr}
+
+<<myplot, fig.cap = "Plotting x and y", eval = TRUE, echo = FALSE>>=
+# Set the seed
+set.seed(12345)
+# Generate two vectors of 100 N(0,1) random numbers
+x <- rnorm(100)
+y <- rnorm(100)
+# Create a plot of x and y
+plot(x,y)
+@
+Notice that Figure~\ref{fig:myplot} displays the relationship between $x$ and $y$.
+
+\end{document}
